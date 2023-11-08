@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Soal 2</title>
+</head>
+<body>
+    <p>Soal Kode B No. 3</p>
+    <label for="alas">Masukkan Panjang Alas:</label>
+    <input type="number" id="alas">
+    <br>
+    <label for="tinggi">Masukkan tinggi segitiga:</label>
+    <input type="number" id="tinggi">
+    <br>
+    <button onclick="hitungluas()">Hitung Luas</button>
+    <p id="hasilLuas"></p>
+    <form action="index.html">
+        <button type="submit">
+            Kembali
+        </button>
+    </form>
+
+    <script>
+        function hitungluas() {
+            var alas = parseFloat(document.getElementById("alas").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+            var hasilLuas = 0.5 * alas * tinggi;
+            var output = document.getElementById("hasilLuas");
+
+            if (hasilLuas) {
+                output.textContent = "Luas segitiga: " + hasilLuas;
+            } else {
+                output.textContent = "Masukkan Panjang Alas dan Tinggi !!!"; 
+            }
+        }
+
+</script>
+</body>
+</html>

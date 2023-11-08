@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 3</title>
+</head>
+<body>
+    <p>Soal Kode B No. 7</p>
+    <label for="hari">Pilih hari:</label>
+    <select id="hari">
+        <option value="senin">Senin</option>
+        <option value="selasa">Selasa</option>
+        <option value="rabu">Rabu</option>
+        <option value="kamis">Kamis</option>
+        <option value="jumat">Jumat</option>
+    </select>
+    <button onclick="tampilSeragam()">Tampilkan Seragam</button>
+    <form action="index.html">
+        <button type="submit">
+            Kembali
+        </button>
+    </form>
+    <script>
+        function tampilSeragam() {
+            var hari = document.getElementById("hari").value;
+            var jenisSeragam;
+
+            switch (hari) {
+                case "senin":
+                    jenisSeragam = "Seragam Osis";
+                    break;
+                case "selasa":
+                    jenisSeragam = "Seragam Identitas (abu-abu)";
+                    break;
+                case "rabu":
+                    jenisSeragam = "Seragam Batik";
+                    break;
+                case "kamis":
+                    jenisSeragam = "Seragam Osis/ Praktek";
+                    break;
+                case "jumat":
+                    jenisSeragam = "Seragam Pramuka";
+                    break;
+                default:
+                    jenisSeragam = "Tidak ada seragam yang ditentukan.";
+                    break;
+            }
+
+            console.log("Hari " + hari + ": " + jenisSeragam);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 1</title>
+</head>
+<body>
+    <p> Soal Kode B No. 6</p>
+    <label for="inputText">Jenis Smartphone :</label>
+    <input type="text" id="inputText">
+    <button onclick="jenissmartphone()">Deteksi</button>
+    <p id="output"></p>
+    <form action="index.html">
+        <button type="submit">
+            Kembali
+        </button>
+    </form>
+
+    <script>
+        function jenissmartphone() {
+            var inputText = document.getElementById("inputText").value;
+            var output = document.getElementById("output");
+
+            if (inputText === "10MP") {
+                output.textContent = "Jenis smartphone: Kamera";
+            } else if (inputText === "128GB") {
+                output.textContent = "Jenis smartphone: Memori";
+            } else {
+                output.textContent = "Tidak ada jenis smartphone yang sesuai dengan input.";
+            }
+        }
+    </script>
+</body>
+</html>

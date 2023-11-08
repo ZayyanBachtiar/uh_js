@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 4</title>
+</head>
+<body>
+    <p>Soal Kode B No. 4</p>
+    <label for="panjangA">Masukkan Panjang Sisi A:</label>
+    <input type="number" id="panjangA">
+    <br>
+    <label for="panjangB">Masukkan Panjang Sisi B:</label>
+    <input type="number" id="panjangB">
+    <br>
+    <button onclick="keliling()">Hitung Keliling</button>
+    <p id="hasilKeliling"></p>
+    <form action="index.html">
+        <button type="submit">
+            Kembali
+        </button>
+    </form>
+
+
+    <script>
+        function keliling() {
+            var panjangA = parseFloat(document.getElementById("panjangA").value);
+            var panjangB = parseFloat(document.getElementById("panjangB").value);
+            var keliling = 2 * (panjangA + panjangB);
+            var output = document.getElementById("hasilKeliling");
+
+            if (keliling) {
+                output.textContent = "Keliling jajar genjang: " + keliling;
+            } else {
+                output.textContent = "Masukkan panjang sisi A dan B dengan benar.";
+            }
+        }
+    </script>
+</body>
+</html>
